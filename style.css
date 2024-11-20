@@ -1,0 +1,23 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+.swiper-slide {
+    width: auto;
+    height: auto;
+    margin: 0 16px;
+}
+
+/* 自定義分頁器樣式 */
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #cbd5e1;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #3b82f6;
+}

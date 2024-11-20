@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeHelp Bootcamp 深度學習 課程申請</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+    </link>
 </head>
 
 <body class="bg-gray-50">
@@ -14,7 +18,6 @@
         <header class="max-w-4xl mx-auto mb-8">
             <h1 class="text-3xl font-bold text-gray-800 mb-4">WeHelp Bootcamp 深度學習 課程申請</h1>
         </header>
-
         <!-- 主要內容區 -->
         <main class="max-w-4xl mx-auto space-y-6">
             <!-- 個人簡介和申請動機 -->
@@ -29,18 +32,67 @@
                     </p>
                 </div>
             </section>
-
             <!-- 技術學習經歷 -->
             <section class="bg-white rounded-lg shadow-sm p-6 transition duration-300 hover:shadow-md">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">技術學習經歷</h2>
-                <ul class="list-disc list-inside space-y-2 text-gray-600">
-                    <li>node.js人才培訓班 <a href="https://www.cine-pos.com/intro/">cine-pos</a></li>
-                    <li>AI promt</li>
-                    <li>收納規劃app：<a href="https://ithelp.ithome.com.tw/users/20162350/articles"
-                            class="text-blue-600 hover:text-blue-800" target="_blank">作品連結</a></li>
-                </ul>
-            </section>
 
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Node.js培訓卡片 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="w-72 bg-blue-50 rounded-lg shadow p-4 transform transition duration-300 hover:scale-105 hover:shadow-md">
+                                <h3 class="text-lg font-medium text-blue-800 mb-2">Node.js人才培訓班</h3>
+                                <div class="text-sm text-blue-600">
+                                    <p>專業培訓課程</p>
+                                    <p>後端開發技能</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI Prompt卡片 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="w-72 bg-purple-50 rounded-lg shadow p-4 transform transition duration-300 hover:scale-105 hover:shadow-md">
+                                <h3 class="text-lg font-medium text-purple-800 mb-2">AI Prompt</h3>
+                                <div class="text-sm text-purple-600">
+                                    <p>AI對話設計</p>
+                                    <p>提示詞工程</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 收納規劃app卡片 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="w-72 bg-green-50 rounded-lg shadow p-4 transform transition duration-300 hover:scale-105 hover:shadow-md">
+                                <h3 class="text-lg font-medium text-green-800 mb-2">收納規劃App</h3>
+                                <div class="text-sm text-green-600">
+                                    <p>個人作品開發</p>
+                                    <p><a href="https://ithelp.ithome.com.tw/users/20162350/articles"
+                                            class="hover:underline" target="_blank">查看作品連結 →</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 卡片 4 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="w-72 bg-green-50 rounded-lg shadow p-4 transform transition duration-300 hover:scale-105 hover:shadow-md">
+                                <h3 class="text-lg font-medium text-green-800 mb-2">4</h3>
+                                <div class="text-sm text-green-600">
+                                    <p>4</p>
+                                    <p>查看作品連結 →</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 添加分頁 -->
+                    <div class="swiper-pagination mt-4"></div>
+                </div>
+            </section>
             <!-- 學習時間安排 -->
             <section class="bg-white rounded-lg shadow-sm p-6 transition duration-300 hover:shadow-md">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">學習時間安排</h2>
@@ -86,6 +138,9 @@
                 <p class="text-gray-600">謝謝你們提供的資源</p>
             </section>
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="index.js"></script>
+
     </div>
 </body>
 
