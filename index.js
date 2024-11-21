@@ -13,8 +13,8 @@ var swiper = new Swiper(".mySwiper", {
         },
         // 當視窗寬度 >= 1024px
         1024: {
-            slidesPerView: 3,
-            spaceBetween: 16,
+            slidesPerView:2,
+            spaceBetween: 12,
         }
     }
 });
@@ -33,13 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: "emotion", label: "情緒處理" },
         { id: "sharing", label: "開發心得" },
         { id: "social", label: "社會連結" },
-        { id: "extra", label: "補充說明" }
+        { id: "extra", label: "想說的話" }
     ];
 
     const navContent = `
         <div class="max-w-4xl mx-auto px-4">
             <div class="flex items-center justify-between h-16">
-                <span class="text-2xl font-semibold text-gray-800">課程申請</span>
+                <span class="text-2xl font-semibold text-gray-800">深度學習</span>
                 <div class="hidden md:flex space-x-4">
                     ${navItems.map(item => `
                         <button 
