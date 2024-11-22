@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    </link>
 
-    <!-- 配置 Tailwind 的字體 -->
+    <!-- Tailwind 配置 -->
     <script>
         tailwind.config = {
             theme: {
@@ -31,450 +30,38 @@
         <header class="max-w-4xl mx-auto mb-8">
             <h1 class="text-3xl font-bold text-gray-800 mb-4">課程申請</h1>
         </header>
+
         <!-- 主要內容區 -->
         <main class="max-w-4xl mx-auto space-y-6">
             <!-- 個人簡介和申請動機 -->
             <section id="intro" class="bg-white rounded-lg shadow-sm p-6 transition duration-300 hover:shadow-md">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">個人簡介和申請動機</h2>
                 <div class="space-y-4 text-gray-600 text-justify">
-                    <p></p>
-                    <p>非本科系畢業，在北科大 Java 人才培訓班進行半年集訓後，在接案公司磨練四年，現在在永豐金證券擔任系統工程師。 5 年網頁應用軟體工程師，工作主要使用 Angular 、 Node.js
-                        (轉ts)完成開發，也曾短暫使用 Java 。
-                    </p>
-
-                    <p>我一直在思考怎麼樣才能賺到更多的錢，而且是以適合我的方式，依我目前的技術發展方向，如果不去博弈業的話，好像薪資成長幅度越來越低，所以想藉由學習新的技能為我的職涯帶來新的成長，我想要在深度學習這塊站穩腳步，也需要一個有系統化的學習流程，幫助我事半功倍，同時需要同儕激勵我，這裡看起來是個合適的位置。
-                    </p>
-                    <p>另外在個人專案的部分，我想要嘗試做一個AI陪伴員，提供情緒價值，或是抒發負面的情緒，現有的 NSFW 過濾制度我並不滿意，且在中文化的部分一直很難讓我有投入感，我想自己做釣竿，不想花錢買魚。
-                    </p>
+                    <p>非本科系畢業，在北科大 Java 人才培訓班進行半年集訓後，在接案公司磨練四年，現在在永豐金證券擔任系統工程師。 5 年網頁應用軟體工程師，工作主要使用 Angular 、 Node.js (轉ts)完成開發，也曾短暫使用 Java 。</p>
+                    <p>我一直在思考怎麼樣才能賺到更多的錢，而且是以適合我的方式，依我目前的技術發展方向，如果不去博弈業的話，好像薪資成長幅度越來越低，所以想藉由學習新的技能為我的職涯帶來新的成長，我想要在深度學習這塊站穩腳步，也需要一個有系統化的學習流程，幫助我事半功倍，同時需要同儕激勵我，這裡看起來是個合適的位置。</p>
+                    <p>另外在個人專案的部分，我想要嘗試做一個AI陪伴員，提供情緒價值，或是抒發負面的情緒，現有的 NSFW 過濾制度我並不滿意，且在中文化的部分一直很難讓我有投入感，我想自己做釣竿，不想花錢買魚。</p>
                     <p>在開始當工程師之前是世新觀光系規劃組(該組已解散)畢業，台北大學都市計劃所肄業，跟高中同學開了一間密室逃脫《迷狐》，經營一年後結束營業，最後評估薪資發展、自身興趣和能力，轉職成工程師。</p>
                 </div>
             </section>
+
             <!-- 技術學習經歷 -->
             <section id="tech" class="bg-white rounded-lg shadow-sm p-6 transition duration-300 hover:shadow-md">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">曾經做過哪些軟體工程技術相關的學習？</h2>
-
-
                 <!-- Swiper -->
                 <div class="swiper mySwiper px-4">
-                    <div class="swiper-wrapper py-8">
-                        <!-- 收納規劃app卡片 -->
-                        <div class="swiper-slide">
-                            <div
-                                class="w-80 bg-white rounded-xl shadow-lg transition duration-300 hover:shadow-xl overflow-hidden">
-                                <!-- 圖片區域 -->
-                                <div class="relative">
-                                    <img src="https://via.placeholder.com/600x400" alt="收納規劃應用"
-                                        class="w-full h-48 object-cover transition duration-300" />
-                                    <!-- 半透明覆蓋層 -->
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-b from-orange-500/30 via-rose-500/50 to-rose-900/90">
-                                        <!-- 標籤定位在左上角 -->
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1 text-xs font-medium bg-orange-50 text-orange-700 rounded-full backdrop-blur-sm">
-                                            IT鐵人賽
-                                        </span>
-                                    </div>
-                                    <!-- 標題定位在圖片底部 -->
-                                    <div class="absolute bottom-0 left-0 right-0 p-4">
-                                        <h3 class="text-xl font-bold text-orange-50 mb-1">收納規劃應用</h3>
-                                        <div class="flex gap-2">
-                                            <span
-                                                class="px-2 py-1 text-xs bg-orange-300/20 text-orange-50 rounded-md backdrop-blur-sm">SVG</span>
-                                            <span
-                                                class="px-2 py-1 text-xs bg-orange-300/20 text-orange-50 rounded-md backdrop-blur-sm">Auth0</span>
-                                            <span
-                                                class="px-2 py-1 text-xs bg-orange-300/20 text-orange-50 rounded-md backdrop-blur-sm">Google OAuth 2.0</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 內容區域 -->
-                                <div class="p-6 bg-gradient-to-b from-orange-50/50">
-                                    <p class="text-orange-950 text-sm leading-relaxed mb-6">
-                                        開發一款收納管理應用，運用 SVG 技術實現互動式空間規劃功能。
-                                    </p>
-
-                                    <!-- 連結區域 -->
-                                    <div class="space-y-3">
-                                        <a href="https://ithelp.ithome.com.tw/users/20162350/ironman/8027" target="_blank"
-                                            class="group flex items-center justify-between p-3 rounded-lg border border-orange-200 hover:bg-orange-50/70 transition duration-300">
-                                            <div class="flex items-center gap-3">
-                                                <div
-                                                    class="w-8 h-8 rounded-full bg-gradient-to-br from-orange-100 to-rose-100 flex items-center justify-center group-hover:from-orange-200 group-hover:to-rose-200 transition duration-300">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-4 w-4 text-orange-600" viewBox="0 0 20 20"
-                                                        fill="currentColor">
-                                                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                                                        <path fill-rule="evenodd"
-                                                            d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <span
-                                                    class="text-sm font-medium text-orange-900 group-hover:text-orange-950">鐵人賽文章</span>
-                                            </div>
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="h-5 w-5 text-orange-400 group-hover:text-orange-600 transition-transform duration-300 group-hover:translate-x-1"
-                                                viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
-
-                                        <!-- 專案規劃連結 -->
-                                        <a href="https://stackblitz.com/edit/stackblitz-starters-d6dksw"
-                                            class="group flex items-center justify-between p-3 rounded-lg border border-orange-200 hover:bg-orange-50/70 transition duration-300">
-                                            <div class="flex items-center gap-3">
-                                                <div
-                                                    class="w-8 h-8 rounded-full bg-gradient-to-br from-orange-100 to-rose-100 flex items-center justify-center group-hover:from-orange-200 group-hover:to-rose-200 transition duration-300">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-4 w-4 text-orange-600" viewBox="0 0 20 20"
-                                                        fill="currentColor">
-                                                        <path fill-rule="evenodd"
-                                                            d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <span
-                                                    class="text-sm font-medium text-orange-900 group-hover:text-orange-950">Demo</span>
-                                            </div>
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="h-5 w-5 text-orange-400 group-hover:text-orange-600 transition-transform duration-300 group-hover:translate-x-1"
-                                                viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
-
-                                        <!-- 課程作業連結 -->
-                                        <a href="https://example.com/demo1"
-                                            class="group flex items-center justify-between p-3 rounded-lg border border-orange-200 hover:bg-orange-50/70 transition duration-300">
-                                            <div class="flex items-center gap-3">
-                                                <div
-                                                    class="w-8 h-8 rounded-full bg-gradient-to-br from-orange-100 to-rose-100 flex items-center justify-center group-hover:from-orange-200 group-hover:to-rose-200 transition duration-300">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-4 w-4 text-orange-600" viewBox="0 0 20 20"
-                                                        fill="currentColor">
-                                                        <path
-                                                            d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-                                                    </svg>
-                                                </div>
-                                                <span
-                                                    class="text-sm font-medium text-orange-900 group-hover:text-orange-950">課程作業</span>
-                                            </div>
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="h-5 w-5 text-orange-400 group-hover:text-orange-600 transition-transform duration-300 group-hover:translate-x-1"
-                                                viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Node.js培訓卡片 -->
-                        <div class="swiper-slide">
-                            <div
-                                class="w-80 bg-white rounded-xl shadow-lg transition duration-300 hover:shadow-xl overflow-hidden">
-                                <!-- 圖片區域 -->
-                                <div class="relative">
-                                    <img src="https://via.placeholder.com/600x400" alt="Node.js培訓"
-                                        class="w-full h-48 object-cover transition duration-300" />
-                                    <!-- 半透明覆蓋層 -->
-                                    <div class="absolute inset-0 bg-gradient-to-b from-amber-950/30 to-amber-950/80">
-                                        <!-- 標籤定位在左上角 -->
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1 text-xs font-medium bg-amber-50/90 text-amber-900 rounded-full">
-                                            專業培訓
-                                        </span>
-                                    </div>
-                                    <!-- 標題定位在圖片底部 -->
-                                    <div class="absolute bottom-0 left-0 right-0 p-4">
-                                        <h3 class="text-xl font-bold text-amber-50 mb-1">Node.js 培訓課程</h3>
-                                        <div class="flex gap-2">
-                                            <span
-                                                class="px-2 py-1 text-xs bg-amber-900/30 text-amber-50 rounded-md backdrop-blur-sm">Node.js</span>
-                                            <span
-                                                class="px-2 py-1 text-xs bg-amber-900/30 text-amber-50 rounded-md backdrop-blur-sm">Express</span>
-                                            <span
-                                                class="px-2 py-1 text-xs bg-amber-900/30 text-amber-50 rounded-md backdrop-blur-sm">RESTful
-                                                API</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 內容區域 -->
-                                <div class="p-6 bg-gradient-to-b from-amber-50/50">
-                                    <p class="text-amber-900 text-sm leading-relaxed mb-6">
-                                        完成為期三個月的後端開發實戰培訓，專注於 Node.js 技術棧的應用與實踐。
-                                    </p>
-
-                                    <!-- 連結區域 -->
-                                    <div class="space-y-3">
-                                        <a href="https://example.com/demo3"
-                                            class="group flex items-center justify-between p-3 rounded-lg border border-amber-200 hover:bg-amber-50 transition duration-300">
-                                            <div class="flex items-center gap-3">
-                                                <div
-                                                    class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition duration-300">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-4 w-4 text-amber-700" viewBox="0 0 20 20"
-                                                        fill="currentColor">
-                                                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                                                        <path fill-rule="evenodd"
-                                                            d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <span
-                                                    class="text-sm font-medium text-amber-900 group-hover:text-amber-950">成果展示</span>
-                                            </div>
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="h-5 w-5 text-amber-400 group-hover:text-amber-600 transition-transform duration-300 group-hover:translate-x-1"
-                                                viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
-
-                                        <a href="https://example.com/demo2"
-                                            class="group flex items-center justify-between p-3 rounded-lg border border-amber-200 hover:bg-amber-50 transition duration-300">
-                                            <div class="flex items-center gap-3">
-                                                <div
-                                                    class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition duration-300">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-4 w-4 text-amber-700" viewBox="0 0 20 20"
-                                                        fill="currentColor">
-                                                        <path fill-rule="evenodd"
-                                                            d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <span
-                                                    class="text-sm font-medium text-amber-900 group-hover:text-amber-950">專案規劃</span>
-                                            </div>
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="h-5 w-5 text-amber-400 group-hover:text-amber-600 transition-transform duration-300 group-hover:translate-x-1"
-                                                viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
-
-                                        <a href="https://example.com/demo1"
-                                            class="group flex items-center justify-between p-3 rounded-lg border border-amber-200 hover:bg-amber-50 transition duration-300">
-                                            <div class="flex items-center gap-3">
-                                                <div
-                                                    class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition duration-300">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-4 w-4 text-amber-700" viewBox="0 0 20 20"
-                                                        fill="currentColor">
-                                                        <path
-                                                            d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-                                                    </svg>
-                                                </div>
-                                                <span
-                                                    class="text-sm font-medium text-amber-900 group-hover:text-amber-950">課程作業</span>
-                                            </div>
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="h-5 w-5 text-amber-400 group-hover:text-amber-600 transition-transform duration-300 group-hover:translate-x-1"
-                                                viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 跑跑薑餅人卡片 -->
-                        <div class="swiper-slide">
-                            <div
-                                class="w-80 bg-white rounded-xl shadow-lg transition duration-300 hover:shadow-xl overflow-hidden">
-                                <!-- 圖片區域 -->
-                                <div class="relative">
-                                    <img src="https://via.placeholder.com/600x400" alt="小遊戲圖片"
-                                        class="w-full h-48 object-cover transition duration-300" />
-                                    <!-- 半透明覆蓋層 -->
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-b from-orange-500/30 via-rose-500/50 to-rose-900/90">
-                                        <!-- 標籤定位在左上角 -->
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1 text-xs font-medium bg-orange-50 text-orange-700 rounded-full backdrop-blur-sm">
-                                            自主學習
-                                        </span>
-                                    </div>
-                                    <!-- 標題定位在圖片底部 -->
-                                    <div class="absolute bottom-0 left-0 right-0 p-4">
-                                        <h3 class="text-xl font-bold text-orange-50 mb-1">咒語開發網頁小遊戲</h3>
-                                        <div class="flex gap-2">
-                                            <span
-                                            class="px-2 py-1 text-xs bg-orange-300/20 text-orange-50 rounded-md backdrop-blur-sm">GPT</span>
-                                        <span
-                                            class="px-2 py-1 text-xs bg-orange-300/20 text-orange-50 rounded-md backdrop-blur-sm">DALL-E</span>
-                                        <span
-                                            class="px-2 py-1 text-xs bg-orange-300/20 text-orange-50 rounded-md backdrop-blur-sm">HTML</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 內容區域 -->
-                                <div class="p-6 bg-gradient-to-b from-orange-50/50">
-                                    <p class="text-orange-950 text-sm leading-relaxed mb-6">
-                                        以指令產生網頁版跑跑薑餅人的小遊戲，圖片也使用AI生成。
-                                    </p>
-
-                                    <!-- 連結區域 -->
-                                    <div class="space-y-3">
-                                        <!-- 成果展示連結 -->
-                                        <a href="https://example.com/demo3"
-                                            class="group flex items-center justify-between p-3 rounded-lg border border-orange-200 hover:bg-orange-50/70 transition duration-300">
-                                            <div class="flex items-center gap-3">
-                                                <div
-                                                    class="w-8 h-8 rounded-full bg-gradient-to-br from-orange-100 to-rose-100 flex items-center justify-center group-hover:from-orange-200 group-hover:to-rose-200 transition duration-300">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-4 w-4 text-orange-600" viewBox="0 0 20 20"
-                                                        fill="currentColor">
-                                                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                                                        <path fill-rule="evenodd"
-                                                            d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <span
-                                                    class="text-sm font-medium text-orange-900 group-hover:text-orange-950">成果展示</span>
-                                            </div>
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="h-5 w-5 text-orange-400 group-hover:text-orange-600 transition-transform duration-300 group-hover:translate-x-1"
-                                                viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
-
-                                        <!-- 專案規劃連結 -->
-                                        <a href="https://example.com/demo2"
-                                            class="group flex items-center justify-between p-3 rounded-lg border border-orange-200 hover:bg-orange-50/70 transition duration-300">
-                                            <div class="flex items-center gap-3">
-                                                <div
-                                                    class="w-8 h-8 rounded-full bg-gradient-to-br from-orange-100 to-rose-100 flex items-center justify-center group-hover:from-orange-200 group-hover:to-rose-200 transition duration-300">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-4 w-4 text-orange-600" viewBox="0 0 20 20"
-                                                        fill="currentColor">
-                                                        <path fill-rule="evenodd"
-                                                            d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <span
-                                                    class="text-sm font-medium text-orange-900 group-hover:text-orange-950">專案規劃</span>
-                                            </div>
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="h-5 w-5 text-orange-400 group-hover:text-orange-600 transition-transform duration-300 group-hover:translate-x-1"
-                                                viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
-
-                                        <!-- 課程作業連結 -->
-                                        <a href="https://example.com/demo1"
-                                            class="group flex items-center justify-between p-3 rounded-lg border border-orange-200 hover:bg-orange-50/70 transition duration-300">
-                                            <div class="flex items-center gap-3">
-                                                <div
-                                                    class="w-8 h-8 rounded-full bg-gradient-to-br from-orange-100 to-rose-100 flex items-center justify-center group-hover:from-orange-200 group-hover:to-rose-200 transition duration-300">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-4 w-4 text-orange-600" viewBox="0 0 20 20"
-                                                        fill="currentColor">
-                                                        <path
-                                                            d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-                                                    </svg>
-                                                </div>
-                                                <span
-                                                    class="text-sm font-medium text-orange-900 group-hover:text-orange-950">課程作業</span>
-                                            </div>
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="h-5 w-5 text-orange-400 group-hover:text-orange-600 transition-transform duration-300 group-hover:translate-x-1"
-                                                viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="swiper-wrapper">
+                        <!-- 卡片將由 JavaScript 動態生成 -->
                     </div>
-                    <!-- 添加分頁 -->
                     <div class="swiper-pagination mt-8"></div>
                 </div>
             </section>
-            <!-- 學習時間安排 -->
-            <section id="schedule" class="bg-white rounded-lg shadow-sm p-6 transition duration-300 hover:shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">如果參與這個訓練，會怎麼安排學習時間？</h2>
-                <ul class="list-disc list-inside space-y-2 text-gray-600">
-                    <li>平日：2~3天，一天2小時</li>
-                    <li>假日：1天，5~8小時</li>
-                    <li>每月選一個周末休息</li>
-                    <li>通常無法參與線下課程</li>
-                </ul>
-            </section>
 
-            <!-- 軟體技術日新月異，如何確定選擇投入的領域是正確有回報的？ -->
-            <section id="thoughts" class="bg-white rounded-lg shadow-sm p-6 transition duration-300 hover:shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">軟體技術日新月異，如何確定選擇投入的領域是正確有回報的？</h2>
-                <div class="space-y-4 text-gray-600">
-                    <p>首先要定義什麼是「正確」、什麼是「有回報」的，不過定義「正確」這件事對我來說難度有點高，所以我決定先跳過定義正確這件事。</p>
-                    <p>至於「有回報」這件事我倒是可以定義，能滿足我對未知世界的好奇心，就能對我帶來回報，能夠為我帶來工作機會、能夠為我帶來加薪的機會、能夠讓我在需要的時候完成 Side Project，就是有回報的。
-                    </p>
-                </div>
-            </section>
-
-            <!-- 情緒處理經驗 -->
-            <section id="emotion" class="bg-white rounded-lg shadow-sm p-6 transition duration-300 hover:shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">請描述一件產生明顯負面情緒的經歷，如何處理該情緒？</h2>
-                <div class="space-y-4 text-gray-600">
-                    <p>之前有一個很趕專案，大家被時程趕到身體出了狀況(眼睛出血或身體疼痛)，紛紛開始離職，最後只剩我一個人，我也出現了明顯的身體狀況，在上線期間幾乎無法喘過氣，因為恐慌跟焦慮。</p>
-                    <p>我會離開現場深呼吸後回來，有時候睡前開始慌張的話，我會把情緒化型為小鳥，自己則是坐在室內，面向一個大窗戶，看著情緒自己來去。</p>
-                </div>
-            </section>
-
-            <!-- 開發時的技術心得 -->
-            <section id="sharing" class="bg-white rounded-lg shadow-sm p-6 transition duration-300 hover:shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">關於這份申請網頁，分享一個開發時的技術心得</h2>
-                <div class="space-y-4 text-gray-600">
-                    <p>在製作大大小小卡片的時候，猶豫了一下要不要刻成一個元件，但考量下複用率跟時間成本，所以沒有作成元件。</p>
-                    <p>此網頁關於程式碼的部分大約有90%使用Claude完成，我負責發號施令、糾錯跟調整。</p>
-                </div>
-            </section>
-
-            <!-- 社會連結觀點 -->
-            <section id="social" class="bg-white rounded-lg shadow-sm p-6 transition duration-300 hover:shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">工作與社會連結的觀點</h2>
-                <div class="space-y-4 text-gray-600">
-                    <p>原本以為工程師會減少跟人相處的機會，但是反而是需要積極溝通才能創造最佳效果的工作。</p>
-                    <p>我覺得作出來的東西，有人使用是件有成就感的事。</p>
-                </div>
-            </section>
-
-            <!-- 結語 -->
-            <section id="extra" class="bg-white rounded-lg shadow-sm p-6 transition duration-300 hover:shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">其他想要對我們說的事情？</h2>
-                <p class="text-gray-600">謝謝你們提供的資源</p>
-            </section>
+            <!-- 其他章節將由 JavaScript 動態生成 -->
+            
         </main>
     </div>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
