@@ -16,8 +16,8 @@ body {
 
 /* 自定義分頁器樣式 */
 .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
+    width: 16px;
+    height: 16px;
     background: #dba159;
     opacity: 0.5;
 }

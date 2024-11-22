@@ -242,28 +242,6 @@ function createProjectCard({
     `;
 }
 
-// function initSwiper() {
-//     return new Swiper('.mySwiper', {
-//         slidesPerView: 'auto',
-//         spaceBetween: 30,
-//         pagination: {
-//             el: '.swiper-pagination',
-//             clickable: true,
-//         },
-//         breakpoints: {
-//             640: {
-//                 slidesPerView: 1,
-//             },
-//             768: {
-//                 slidesPerView: 2,
-//             },
-//             1024: {
-//                 slidesPerView: 3,
-//             },
-//         }
-//     });
-// }
-
 // sectionTemplate.js
 function createSection({ id, title, content }) {
     return `
@@ -363,8 +341,8 @@ const projectsData = [
     {
         title: '立委競選官網',
         description: 'The F2E 5th 前端& UI 修煉精神時光屋 mission1 比賽題目',
-        tags: ['GPT', 'DALL-E', 'HTML'],
-        badgeText: '自主學習',
+        tags: ['tailwind', '全遠端合作'],
+        badgeText: '前端競賽',
         colorScheme: 'amber',
         imageUrl: 'https://via.placeholder.com/600x400',
         links: [
@@ -377,8 +355,8 @@ const projectsData = [
                       </svg>`
             },
             {
-                url: '#',
-                label: '專案規劃',
+                url: 'https://2023.thef2e.com/users/12061579704051710124',
+                label: '參賽資訊',
                 icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z" clip-rule="evenodd" />
                       </svg>`
@@ -397,7 +375,7 @@ const sectionsData = [
                 <li>平日：2~3天，一天2小時</li>
                 <li>假日：1天，5~8小時</li>
                 <li>每月選一個周末休息</li>
-                <li>通常無法參與線下課程</li>
+                <li>通常無法參與線下課程，剛入職不久特休不夠，最多可能每月出現一次，如果確定可以參加，會付全額場地費(不過如果可以有點彈性當然更好)</li>
             </ul>
         `
     },
@@ -407,7 +385,7 @@ const sectionsData = [
         content: `
             <div class="space-y-4">
                 <p>首先要定義什麼是「正確」、什麼是「有回報」的，不過定義「正確」這件事對我來說難度有點高，所以我決定先跳過定義正確這件事。</p>
-                <p>至於「有回報」這件事我倒是可以定義，能滿足我對未知世界的好奇心，就能對我帶來回報，能夠為我帶來工作機會、能夠為我帶來加薪的機會、能夠讓我在需要的時候完成 Side Project，就是有回報的。</p>
+                <p>至於「有回報」這件事我倒是可以定義，能滿足我對未知世界的好奇心，就能對我帶來回報，能夠為我帶來工作機會、能夠為我帶來加薪的機會、能夠讓我在需要的時候完成我的個人專案，就是有回報的。</p>
             </div>
         `
     },
@@ -426,18 +404,17 @@ const sectionsData = [
         title: '關於這份申請網頁，分享一個開發時的技術心得',
         content: `
             <div class="space-y-4">
-                <p>在製作大大小小卡片的時候，猶豫了一下要不要刻成一個元件，但考量下複用率跟時間成本，所以沒有作成元件。</p>
-                <p>此網頁關於程式碼的部分大約有90%使用Claude完成，我負責發號施令、糾錯跟調整。</p>
+                <p>「為什麼 JavaScript 檔案要放在 </body> 標籤前？」</p>
+                <p>因為太久沒有寫原生的 JS ，所以習慣性的把所有引用的部分放到上方，也就是 <Head></Head> 裡面，結果導致我的套件跟我的 script 無法正確生效。後來重新找了一下為什麼，才發現忘記要等 DOM 都載入之後，才能對 DOM 操作，所以改放到 </body> 上一行，解決這個問題。</p>
             </div>
         `
     },
     {
         id: 'social',
-        title: '工作與社會連結的觀點',
+        title: '如何看待自身工作和整個社會群體的連結關係？',
         content: `
             <div class="space-y-4">
-                <p>原本以為工程師會減少跟人相處的機會，但是反而是需要積極溝通才能創造最佳效果的工作。</p>
-                <p>我覺得作出來的東西，有人使用是件有成就感的事。</p>
+                <p>我的工作是簡化各式各樣的流程，讓資料可以容易的記錄、取得、閱讀跟訂正，減少紙本文件跟運輸碳排放，數位化也減少實體空間存放需求，讓資料更容易地被分析，提高經濟效益同時友善環境。</p>
             </div>
         `
     },
@@ -445,7 +422,8 @@ const sectionsData = [
         id: 'extra',
         title: '其他想要對我們說的事情？',
         content: `
-            <p>謝謝你們提供的資源</p>
+            <p>謝謝你們提供的資源。</p>
+            <p>我希望周一會議不要超過晚上10點，睡得太少我隔天會狀態不好。</p>
         `
     }
 ];
