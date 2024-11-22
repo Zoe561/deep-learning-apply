@@ -1,28 +1,28 @@
 var swiper = new Swiper(".mySwiper", {
+    
     slidesPerView: "auto",
-    spaceBetween: 16,
+    spaceBetween: 30,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
     breakpoints: {
-        // 當視窗寬度 >= 640px
         640: {
-            slidesPerView: 2,
-            spaceBetween: 16,
+            slidesPerView: 1,
         },
-        // 當視窗寬度 >= 1024px
+        768: {
+            slidesPerView: 2,
+        },
         1024: {
-            slidesPerView:2,
-            spaceBetween: 12,
-        }
+            slidesPerView: 2,
+        },
     }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
     // 創建導航欄
     const nav = document.createElement('nav');
-    nav.className = 'fixed top-0 left-0 right-0 bg-white shadow-md z-50';
+    nav.className = 'fixed top-0 left-0 right-0 bg-[#d0e3cc]/[0.9] shadow-md z-50';
     
     // 導航項目
     const navItems = [
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     ${navItems.map(item => `
                         <button 
                             onclick="scrollToSection('${item.id}')"
-                            class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                            class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
                         >
                             ${item.label}
                         </button>
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 回到頂部按鈕
     const scrollButton = document.createElement('button');
-    scrollButton.className = 'fixed bottom-4 right-4 bg-blue-600 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 hidden';
+    scrollButton.className = 'fixed bottom-4 right-4 bg-[#dba159] text-white p-2 rounded-full shadow-lg hover:bg-[#8b6b3d] transition-colors duration-200 hidden';
     scrollButton.innerHTML = `
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
@@ -127,3 +127,52 @@ function scrollToSection(id) {
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenu.classList.add('hidden');
 }
+
+(function() {
+    // 等待 DOM 完全加載
+    document.addEventListener('DOMContentLoaded', function() {
+        // 使用事件委派，監聽所有 demo-button 的點擊事件
+        document.addEventListener('click', function(e) {
+            // 檢查被點擊的元素是否有 demo-button class
+            if (e.target.closest('.demo-button')) {
+                const button = e.target.closest('.demo-button');
+                handleDemoButtonClick(button);
+            }
+        });
+    });
+
+    // 處理按鈕點擊的函數
+    function handleDemoButtonClick(button) {
+        // 從 data-url 屬性獲取 URL
+        const demoUrl = button.dataset.url;
+        
+        if (!demoUrl) {
+            console.error('No URL provided for this demo button');
+            return;
+        }
+
+        // 驗證 URL
+        if (isValidUrl(demoUrl)) {
+            // 開啟新視窗
+            const newWindow = window.open(demoUrl, '_blank');
+            
+            // 確保新視窗成功開啟並設置安全選項
+            if (newWindow) {
+                newWindow.opener = null;
+            }
+        } else {
+            console.error('Invalid URL provided:', demoUrl);
+        }
+    }
+
+    // URL 驗證函數
+    function isValidUrl(url) {
+        try {
+            new URL(url);
+            return true;
+        } catch (e) {
+            console.error('Invalid URL:', e);
+            return false;
+        }
+    }
+})();
