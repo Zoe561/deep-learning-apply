@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 回到頂部按鈕
     const scrollButton = document.createElement('button');
-    scrollButton.className = 'fixed bottom-4 right-4 bg-[#dba159] text-white p-2 rounded-full shadow-lg hover:bg-[#8b6b3d] transition-colors duration-200 hidden';
+    scrollButton.className = 'z-50 fixed bottom-4 right-4 bg-[#dba159] text-white p-2 rounded-full shadow-lg hover:bg-[#8b6b3d] transition-colors duration-200 hidden';
     scrollButton.innerHTML = `
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
