@@ -263,7 +263,7 @@ const projectsData = [
         tags: ['SVG', 'Auth0', 'Google OAuth 2.0'],
         badgeText: 'IT鐵人賽',
         colorScheme: 'orange',
-        imageUrl: 'https://via.placeholder.com/600x400',
+        imageUrl: 'image/storage.png',
         links: [
             {
                 url: 'https://ithelp.ithome.com.tw/users/20162350/ironman/8027',
@@ -288,7 +288,7 @@ const projectsData = [
         tags: ['Node.js', 'MongoDB', 'DevExtreme', '遠端'],
         badgeText: '自主培訓',
         colorScheme: 'amber',
-        imageUrl: 'https://via.placeholder.com/600x400',
+        imageUrl: 'image/cine-pos.png',
         links: [
             {
                 url: 'https://www.cine-pos.com/intro/',
@@ -347,7 +347,7 @@ const projectsData = [
         tags: ['tailwind', '遠端合作'],
         badgeText: '前端競賽',
         colorScheme: 'amber',
-        imageUrl: 'https://via.placeholder.com/600x400',
+        imageUrl: 'image/legislator.png',
         links: [
             {
                 url: 'https://zoe561.github.io/thef2e2023-legislator-election-official-website/',
