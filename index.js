@@ -319,7 +319,7 @@ const projectsData = [
         tags: ['GPT', 'DALL-E', 'HTML'],
         badgeText: '自主學習',
         colorScheme: 'orange',
-        imageUrl: 'https://via.placeholder.com/600x400',
+        imageUrl: 'image/running.png',
         links: [
             {
                 url: '#',
