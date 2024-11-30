@@ -193,7 +193,7 @@ function createProjectCard({
     `).join('');
 
     const linksHtml = links.map(link => `
-        <a href="${link.url}" 
+        <a href="${link.url}" target="_blank"
            class="group flex items-center justify-between p-3 rounded-lg border border-${colorScheme}-200 hover:bg-${colorScheme}-50/70 transition duration-300">
             <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-full bg-gradient-to-br from-${colorScheme}-100 to-rose-100 flex items-center justify-center group-hover:from-${colorScheme}-200 group-hover:to-rose-200 transition duration-300">
@@ -244,6 +244,7 @@ function createProjectCard({
 
 // sectionTemplate.js
 function createSection({ id, title, content }) {
+
     return `
         <section id="${id}" class="bg-white rounded-lg shadow-sm p-6 transition duration-300 hover:shadow-md">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">${title}</h2>
@@ -258,7 +259,7 @@ function createSection({ id, title, content }) {
 const projectsData = [
     {
         title: '收納規劃應用',
-        description: '開發一款收納管理應用，運用 SVG 技術實現互動式空間規劃功能。',
+        description: '開發一款收納管理應用，運用 SVG 技術實現互動式空間規劃功能，並設計遞歸結構處理收納問題（像俄羅斯娃娃這樣的狀態），利用 Auth0 跟 Google OAuth 2.0 處理會員登入。',
         tags: ['SVG', 'Auth0', 'Google OAuth 2.0'],
         badgeText: 'IT鐵人賽',
         colorScheme: 'orange',
@@ -278,26 +279,19 @@ const projectsData = [
                 icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z" clip-rule="evenodd" />
                       </svg>`
-            },
-            {
-                url: '#',
-                label: '課程作業',
-                icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-                      </svg>`
             }
         ]
     },
     {
-        title: 'Node.js 培訓課程',
-        description: '完成為期三個月的後端開發實戰培訓，專注於 Node.js 技術棧的應用與實踐。',
-        tags: ['Node.js', 'Express', 'RESTful API'],
+        title: 'Node.js 企業專題班',
+        description: '完成為期三個月的開發實戰培訓，全遠端課程，每周密集進度更新及分享。專題打造電影訂票POS平台，安排電影時刻表、設計廳院位置、處理訂票，完整實踐前後台溝通。',
+        tags: ['Node.js', 'MongoDB', 'DevExtreme', '遠端'],
         badgeText: '自主培訓',
         colorScheme: 'amber',
         imageUrl: 'https://via.placeholder.com/600x400',
         links: [
             {
-                url: '#',
+                url: 'https://www.cine-pos.com/intro/',
                 label: '成果展示',
                 icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-700" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
@@ -305,24 +299,32 @@ const projectsData = [
                       </svg>`
             },
             {
-                url: '#',
+                url: 'https://liberating-turtle-5a2.notion.site/16-91c9bf263e4c44d4941758ee6924c208',
                 label: '專案規劃',
                 icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-700" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z" clip-rule="evenodd" />
                       </svg>`
+            },
+            {
+                url: 'https://github.com/Zoe561/hexschool/tree/master/nodejs-enterprise-class',
+                label: '課程作業',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+                      </svg>`
             }
+
         ]
     },
     {
         title: '咒語開發網頁小遊戲',
-        description: '以指令產生網頁版跑跑薑餅人的小遊戲，圖片也使用AI生成。',
+        description: '以指令產生網頁版跑跑薑餅人的小遊戲，圖片也使用AI生成，老師的影片使用 Midjourney，但那時候 DALL-E 剛出不久，所以改成用 DALL-E 實踐看看。',
         tags: ['GPT', 'DALL-E', 'HTML'],
         badgeText: '自主學習',
         colorScheme: 'orange',
         imageUrl: 'image/running.png',
         links: [
             {
-                url: '#',
+                url: 'https://running-man-mu.vercel.app/',
                 label: '成果展示',
                 icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
@@ -330,18 +332,19 @@ const projectsData = [
                       </svg>`
             },
             {
-                url: '#',
-                label: '專案規劃',
+                url: 'https://www.youtube.com/watch?v=jEQtW26_h0o',
+                label: '教學網址',
                 icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 1H6v8l4-2 4 2V6z" clip-rule="evenodd" />
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                        <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
                       </svg>`
             }
         ]
     },
     {
         title: '立委競選官網',
-        description: 'The F2E 5th 前端& UI 修煉精神時光屋 mission1 比賽題目',
-        tags: ['tailwind', '全遠端合作'],
+        description: 'The F2E 5th 前端& UI 修煉精神時光屋 mission1 挑戰題目',
+        tags: ['tailwind', '遠端合作'],
         badgeText: '前端競賽',
         colorScheme: 'amber',
         imageUrl: 'https://via.placeholder.com/600x400',
@@ -394,8 +397,10 @@ const sectionsData = [
         title: '請描述一件產生明顯負面情緒的經歷，如何處理該情緒？',
         content: `
             <div class="space-y-4">
+                <p>所有情緒中「焦慮」算是讓我最不舒服的一種情緒。</p>
                 <p>之前有一個很趕專案，大家被時程趕到身體出了狀況(眼睛出血或身體疼痛)，紛紛開始離職，最後只剩我一個人，我也出現了明顯的身體狀況，在上線期間幾乎無法喘過氣，因為恐慌跟焦慮。</p>
                 <p>我會離開現場深呼吸後回來，有時候睡前開始慌張的話，我會把情緒化型為小鳥，自己則是坐在室內，面向一個大窗戶，看著情緒自己來去。</p>
+                <p>最近看完腦筋急轉彎2後，則是學習接受自己就是有焦慮的一部分，接受的過程中也讓我漸漸變得比較平靜。</p>
             </div>
         `
     },
@@ -404,8 +409,8 @@ const sectionsData = [
         title: '關於這份申請網頁，分享一個開發時的技術心得',
         content: `
             <div class="space-y-4">
-                <p>「為什麼 JavaScript 檔案要放在 </body> 標籤前？」</p>
-                <p>因為太久沒有寫原生的 JS ，所以習慣性的把所有引用的部分放到上方，也就是 <Head></Head> 裡面，結果導致我的套件跟我的 script 無法正確生效。後來重新找了一下為什麼，才發現忘記要等 DOM 都載入之後，才能對 DOM 操作，所以改放到 </body> 上一行，解決這個問題。</p>
+                <p>「為什麼 JavaScript 檔案要放在 &lt/body&gt 標籤前？」</p>
+                <p>因為太久沒有寫原生的 JS ，所以習慣性的把所有引用的部分放到上方，也就是 &ltHead&gt&lt/Head&gt 裡面，結果導致我的套件跟我的 script 無法正確生效。後來重新找了一下為什麼，才發現忘記要等 DOM 都載入之後，才能對 DOM 操作，所以改放到 &lt/body&gt 上一行，解決這個問題。</p>
             </div>
         `
     },
